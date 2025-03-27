@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mate Global d.o.o.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .mate {
+            color: red;
+        }
+        .doo {
+            color: green;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .services {
+            margin-top: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span class="mate">Mate Global</span> <span class="doo">d.o.o.</span></h1>
+        <p>Sjedište: Križevci</p>
+    </div>
+
+    <div class="content">
+        <h2>O nama</h2>
+        <p><span class="mate">Mate Global</span> <span class="doo">d.o.o.</span> je tvrtka specijalizirana za građevinske radove i uređenje interijera. Posvećeni smo pružanju visokokvalitetnih usluga kako bismo vaš prostor učinili funkcionalnim i estetski privlačnim.</p>
+
+        <div class="services">
+            <h3>Naše usluge</h3>
+            <ul>
+                <li>Knauf radovi (suha gradnja, pregradni zidovi, spušteni stropovi)</li>
+                <li>Molerski radovi (kretanje, bojanje, dekorativne tehnike)</li>
+                <li>Akustične deke i paneli za zvučnu izolaciju</li>
+                <li>Uređenje interijera (podovi, rasvjeta, stolarija)</li>
+                <li>Postavljanje keramike i sanitarija</li>
+                <li>Adaptacija prostora prema vašim potrebama</li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <h3>Kontaktirajte nas</h3>
+            <p>Za sve upite, pošaljite nam poruku putem obrasca ispod:</p>
+            <form action="mailto:info@mate-global.hr" method="post" enctype="text/plain">
+                <input type="text" name="ime" placeholder="Vaše ime" required>
+                <input type="email" name="email" placeholder="Vaš e-mail" required>
+                <textarea name="poruka" rows="5" placeholder="Vaša poruka" required></textarea>
+                <button type="submit">Pošalji upit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mate Global d.o.o. Sva prava pridržana.</p>
+    </div>
+</body>
+</html>
