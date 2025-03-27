@@ -6,93 +6,138 @@
     <title>Mate Global d.o.o.</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d3d3d3; /* Siva pozadina */
+            color: #333;
         }
         .header {
             background-color: #fff;
             padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
         }
         .header h1 {
             margin: 0;
+            text-align: left;
+            padding-left: 20px;
         }
         .mate {
-            color: red;
+            color: #ff0000; /* Crvena boja */
         }
         .doo {
-            color: green;
+            color: #28a745; /* Zelena boja */
+        }
+        .nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            color: #ff0000;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .content {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1000px;
+            margin: 40px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-        .services {
-            margin-top: 20px;
+        .services, .contact {
+            margin-top: 30px;
         }
-        .contact {
-            margin-top: 20px;
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         .contact button {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
         .contact button:hover {
             background-color: #218838;
         }
         .footer {
-            text-align: center;
-            padding: 10px;
             background-color: #333;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1><span class="mate">Mate Global</span> <span class="doo">d.o.o.</span></h1>
-        <p>Sjedište: Križevci</p>
+    </div>
+
+    <div class="nav">
+        <a href="#home">Početna</a>
+        <a href="#services">Usluge</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+
+    <div class="slideshow">
+        <img class="slides" src="slika1.jpg" alt="Građevinski radovi 1">
+        <img class="slides" src="slika2.jpg" alt="Interijer 1">
+        <img class="slides" src="slika3.jpg" alt="Interijer 2">
+        <img class="slides" src="slika4.jpg" alt="Građevinski radovi 2">
+        <img class="slides" src="slika5.jpg" alt="Interijer 3">
+        <img class="slides" src="slika6.jpg" alt="Knauf radovi">
     </div>
 
     <div class="content">
         <h2>O nama</h2>
-        <p><span class="mate">Mate Global</span> <span class="doo">d.o.o.</span> je tvrtka specijalizirana za građevinske radove i uređenje interijera. Posvećeni smo pružanju visokokvalitetnih usluga kako bismo vaš prostor učinili funkcionalnim i estetski privlačnim.</p>
+        <p><span class="mate">Mate Global</span> <span class="doo">d.o.o.</span> je moderna građevinska tvrtka sa sjedištem u Križevcima, specijalizirana za visokokvalitetne radove i uređenje interijera. Tvrtku vodi Matija Gavranović, posvećen pružanju vrhunskih usluga kako bi vaš prostor bio funkcionalan i estetski privlačan.</p>
 
-        <div class="services">
+        <div class="services" id="services">
             <h3>Naše usluge</h3>
             <ul>
                 <li>Knauf radovi (suha gradnja, pregradni zidovi, spušteni stropovi)</li>
                 <li>Molerski radovi (kretanje, bojanje, dekorativne tehnike)</li>
                 <li>Akustične deke i paneli za zvučnu izolaciju</li>
-                <li>Uređenje interijera (podovi, rasvjeta, stolarija)</li>
+                <li>Uređenje interijera (laminati, rasvjeta, gipsani radovi)</li>
                 <li>Postavljanje keramike i sanitarija</li>
-                <li>Adaptacija prostora prema vašim potrebama</li>
+                <li>Kompletna renovacija i adaptacija prostora</li>
             </ul>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <h3>Kontaktirajte nas</h3>
-            <p>Za sve upite, pošaljite nam poruku putem obrasca ispod:</p>
+            <p>Pošaljite nam upit putem obrasca ispod ili nas kontaktirajte na e-mail: <a href="mailto:info@mate-global.hr">info@mate-global.hr</a></p>
             <form action="mailto:info@mate-global.hr" method="post" enctype="text/plain">
                 <input type="text" name="ime" placeholder="Vaše ime" required>
                 <input type="email" name="email" placeholder="Vaš e-mail" required>
@@ -103,7 +148,23 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Mate Global d.o.o. Sva prava pridržana.</p>
+        <p>© 2025 Mate Global d.o.o. | Sjedište: Križevci | Vlasnik/Direktor: Matija Gavranović</p>
     </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Slike se mijenjaju svake 3 sekunde
+        }
+    </script>
 </body>
 </html>
